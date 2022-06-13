@@ -145,6 +145,27 @@ of the world.\nhttp://www.openstreetmap.org",
     })
   );
 
+//CUSTOM
+  providerViewModels.push(
+    new ProviderViewModel({
+      name: "DGU",
+      iconUrl: 
+        "slike/DGU1.png"
+      ,
+      tooltip:
+        "Reminiscent of hand drawn maps, Stamen watercolor maps apply raster effect \
+area washes and organic edges over a paper texture to add warm pop to any map.\nhttp://maps.stamen.com",
+      category: "Other",
+      creationFunction: function () {
+        return new OpenStreetMapImageryProvider({
+          url: "https://stamen-tiles.a.ssl.fastly.net/watercolor/",
+          credit:
+            "Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under CC BY SA.",
+        });
+      },
+    })
+  );
+
   providerViewModels.push(
     new ProviderViewModel({
       name: "Stamen Watercolor",
